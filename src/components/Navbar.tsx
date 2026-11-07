@@ -135,12 +135,12 @@ export default function Navbar() {
                   key={link.href}
                   href={link.href}
                   prefetch={true}
-                  className={`whitespace-nowrap text-xs uppercase tracking-[0.16em] font-medium transition-opacity duration-150 hover:opacity-60 ${
+                  className={`relative whitespace-nowrap text-xs uppercase tracking-[0.16em] font-medium transition-colors duration-200 after:content-[''] after:absolute after:left-0 after:-bottom-1.5 after:h-[1.5px] after:bg-current after:transition-all after:duration-300 ${
                     useSolidStyle ? "text-[#111110]" : "text-[#FAF9F6]"
                   } ${
                     isActive
-                      ? "underline underline-offset-8 decoration-1"
-                      : ""
+                      ? "after:w-full"
+                      : "after:w-0 hover:after:w-full"
                   }`}
                 >
                   {link.label}
@@ -151,8 +151,10 @@ export default function Navbar() {
 
           <a
             href={`tel:${SCHOOL_INFO.phones.landline1}`}
-            className={`whitespace-nowrap text-xs tracking-[0.1em] flex items-center gap-2 transition-opacity duration-150 hover:opacity-70 ${
-              useSolidStyle ? "text-[#5C5954]" : "text-[#FAF9F6]/85"
+            className={`relative whitespace-nowrap text-xs tracking-[0.1em] flex items-center gap-2 transition-colors duration-200 after:content-[''] after:absolute after:left-0 after:-bottom-1.5 after:h-[1.5px] after:w-0 hover:after:w-full after:bg-current after:transition-all after:duration-300 ${
+              useSolidStyle
+                ? "text-[#5C5954] hover:text-[#111110]"
+                : "text-[#FAF9F6]/85 hover:text-[#FAF9F6]"
             }`}
           >
             <Phone className="w-3.5 h-3.5 stroke-[1.5] shrink-0" />
