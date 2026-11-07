@@ -79,13 +79,13 @@ export default function Navbar() {
           : "bg-gradient-to-b from-[#111110]/90 via-[#111110]/50 to-transparent text-[#FAF9F6] py-3.5 sm:py-5"
       }`}
     >
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 md:px-12 flex items-center justify-between gap-2">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-10 xl:px-12 flex items-center justify-between gap-4 lg:gap-10 xl:gap-14">
         {/* School Crest & Official Name */}
         <Link
           href="/"
           prefetch={true}
           onClick={() => setMobileMenuOpen(false)}
-          className="group flex items-center gap-2.5 sm:gap-3.5 focus:outline-none min-w-0"
+          className="group flex items-center gap-2.5 sm:gap-3.5 focus:outline-none shrink-0"
         >
           <div
             className={`w-10 h-10 sm:w-12 sm:h-12 rounded-none bg-white p-1 flex items-center justify-center border shrink-0 ${
@@ -100,9 +100,9 @@ export default function Navbar() {
               className="w-full h-full object-contain"
             />
           </div>
-          <div className="flex flex-col min-w-0">
+          <div className="flex flex-col shrink-0">
             <div className="flex items-center gap-2">
-              <span className="font-serif text-base sm:text-lg md:text-xl font-medium tracking-tight leading-none truncate">
+              <span className="font-serif text-base sm:text-lg md:text-xl font-medium tracking-tight leading-none whitespace-nowrap">
                 St. Joseph&apos;s
               </span>
               <span
@@ -116,7 +116,7 @@ export default function Navbar() {
               </span>
             </div>
             <span
-              className={`text-[9px] sm:text-[10px] uppercase tracking-[0.15em] sm:tracking-[0.2em] mt-1 truncate ${
+              className={`text-[9px] sm:text-[10px] uppercase tracking-[0.14em] sm:tracking-[0.18em] mt-1 whitespace-nowrap ${
                 useSolidStyle ? "text-[#5C5954]" : "text-[#FAF9F6]/75"
               }`}
             >
@@ -126,8 +126,8 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Navigation & Right Actions */}
-        <div className="hidden lg:flex items-center gap-6 xl:gap-8">
-          <nav className="flex items-center gap-6 xl:gap-8">
+        <div className="hidden lg:flex items-center gap-4 xl:gap-6">
+          <nav className="flex items-center gap-4 xl:gap-6">
             {NAV_LINKS.map((link) => {
               const isActive = pathname === link.href;
               return (
@@ -135,7 +135,7 @@ export default function Navbar() {
                   key={link.href}
                   href={link.href}
                   prefetch={true}
-                  className={`relative whitespace-nowrap text-xs uppercase tracking-[0.16em] font-medium transition-colors duration-200 after:content-[''] after:absolute after:left-0 after:-bottom-1.5 after:h-[1.5px] after:bg-current after:transition-all after:duration-300 ${
+                  className={`relative whitespace-nowrap text-[11px] xl:text-xs uppercase tracking-[0.14em] xl:tracking-[0.16em] font-medium transition-colors duration-200 after:content-[''] after:absolute after:left-0 after:-bottom-1.5 after:h-[1.5px] after:bg-current after:transition-all after:duration-300 ${
                     useSolidStyle ? "text-[#111110]" : "text-[#FAF9F6]"
                   } ${
                     isActive
@@ -151,7 +151,7 @@ export default function Navbar() {
 
           <a
             href={`tel:${SCHOOL_INFO.phones.landline1}`}
-            className={`relative whitespace-nowrap text-xs tracking-[0.1em] flex items-center gap-2 transition-colors duration-200 after:content-[''] after:absolute after:left-0 after:-bottom-1.5 after:h-[1.5px] after:w-0 hover:after:w-full after:bg-current after:transition-all after:duration-300 ${
+            className={`hidden xl:flex relative whitespace-nowrap text-xs tracking-[0.1em] items-center gap-2 transition-colors duration-200 after:content-[''] after:absolute after:left-0 after:-bottom-1.5 after:h-[1.5px] after:w-0 hover:after:w-full after:bg-current after:transition-all after:duration-300 ${
               useSolidStyle
                 ? "text-[#5C5954] hover:text-[#111110]"
                 : "text-[#FAF9F6]/85 hover:text-[#FAF9F6]"
@@ -164,7 +164,7 @@ export default function Navbar() {
           <Link
             href="/#admissions"
             prefetch={true}
-            className={`whitespace-nowrap px-5 py-2.5 text-xs uppercase tracking-[0.16em] font-medium transition-colors duration-150 flex items-center gap-2 border ${
+            className={`whitespace-nowrap px-4 xl:px-5 py-2.5 text-[11px] xl:text-xs uppercase tracking-[0.15em] font-medium transition-colors duration-150 flex items-center gap-2 border ${
               useSolidStyle
                 ? "bg-[#111110] text-[#FAF9F6] border-[#111110] hover:bg-transparent hover:text-[#111110]"
                 : "bg-[#FAF9F6] text-[#111110] border-[#FAF9F6] hover:bg-transparent hover:text-[#FAF9F6]"
