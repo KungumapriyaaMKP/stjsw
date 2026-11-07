@@ -20,6 +20,7 @@ import {
   KEY_METRICS,
   ACADEMIC_TIERS,
   SCHOOL_EVENTS,
+  TESTIMONIALS,
 } from "@/data/schoolData";
 
 export default function HomePage() {
@@ -361,6 +362,58 @@ export default function HomePage() {
                 <div className="px-5 sm:px-7 py-4 border-t border-[#E5E2DC]/60 flex items-center justify-between text-[11px] uppercase tracking-[0.16em] text-[#5C5954]">
                   <span>St. Joseph&apos;s Cultural Wing</span>
                   <span className="font-mono">{event.index}</span>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 4.75 Voices of St. Joseph's (10 Parent, Student & Alumni Testimonials) */}
+      <section
+        id="testimonials"
+        className="py-16 sm:py-24 md:py-32 bg-[#F3F1ED] border-b border-[#E5E2DC]"
+      >
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 md:px-12">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-5 sm:gap-6 pb-10 sm:pb-16 border-b border-[#E5E2DC]">
+            <div className="space-y-3 sm:space-y-4 max-w-2xl">
+              <div className="inline-flex items-center gap-2.5 text-xs uppercase tracking-[0.2em] text-[#5C5954]">
+                <span className="w-6 h-[1px] bg-[#111110]" />
+                <span>Community Voices • Google Reviews</span>
+              </div>
+              <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-normal tracking-tight text-[#111110]">
+                Words from Parents, Students, and Alumni.
+              </h2>
+            </div>
+            <p className="text-sm text-[#5C5954] max-w-md leading-relaxed">
+              Reflections from families and graduates who have experienced the teaching,
+              discipline, and enduring values of St. Joseph&apos;s across generations.
+            </p>
+          </div>
+
+          <div className="pt-10 sm:pt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-5 sm:gap-6">
+            {TESTIMONIALS.map((item) => (
+              <article
+                key={item.index}
+                className="bg-[#FAF9F6] border border-[#E5E2DC] p-6 flex flex-col justify-between transition-colors duration-300 hover:border-[#111110]"
+              >
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between text-[10px] font-mono uppercase tracking-[0.2em] text-[#5C5954]">
+                    <span>Review</span>
+                    <span>{item.index}</span>
+                  </div>
+                  <p className="text-xs text-[#111110] leading-relaxed font-normal">
+                    &ldquo;{item.quote}&rdquo;
+                  </p>
+                </div>
+
+                <div className="pt-5 mt-6 border-t border-[#E5E2DC]/70">
+                  <div className="font-serif text-lg font-medium text-[#111110] leading-tight">
+                    {item.name}
+                  </div>
+                  <div className="text-[10px] uppercase tracking-[0.16em] text-[#5C5954] mt-1">
+                    {item.role}
+                  </div>
                 </div>
               </article>
             ))}

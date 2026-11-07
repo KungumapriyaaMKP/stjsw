@@ -214,6 +214,79 @@ export const ACADEMIC_TIERS = [
   },
 ];
 
+export const TESTIMONIALS = [
+  {
+    index: "01",
+    name: "Sakthi Vel",
+    role: "Parent • Local Guide",
+    quote:
+      "Excellent performance from this school. The teaching is so good for everything. My son is very lucky to study at this school.",
+  },
+  {
+    index: "02",
+    name: "Yasmeen Feroz Khan",
+    role: "Alumni (Josephine)",
+    quote:
+      "I am an old student of this school and I am proud to be a Josephine. As the motto says, the students of my school are shining. Grateful for choosing such a right school.",
+  },
+  {
+    index: "03",
+    name: "Haseena M",
+    role: "Local Guide",
+    quote:
+      "Excellent school in the city. Gives plenty of opportunities for all the students with friendly faculty members and a positive environment.",
+  },
+  {
+    index: "04",
+    name: "Mahendran",
+    role: "Alumni",
+    quote:
+      "Fantastic school. This school changed my total life and taught me to speak fluent English with confidence.",
+  },
+  {
+    index: "05",
+    name: "Pavithra B",
+    role: "Community Member",
+    quote:
+      "It is a very good school and a true place of knowledge, supported by excellent faculty members and good administration.",
+  },
+  {
+    index: "06",
+    name: "Shivakkumar E S",
+    role: "Parent • Local Guide",
+    quote:
+      "Best school for obedience, studies, teaching, and dignity. My daughter is studying here now. Thanks and salute to the school and teachers.",
+  },
+  {
+    index: "07",
+    name: "Senthil Kumar",
+    role: "Parent / Alumni",
+    quote:
+      "Most friendly school that guides you to study the right and important concepts. The experience of the teachers is far ahead of other schools.",
+  },
+  {
+    index: "08",
+    name: "Malathi D",
+    role: "Second-Generation Student",
+    quote:
+      "I am studying in this school and my father also studied in this school. He became a wonderful person because of this institution. I am proud to study here.",
+  },
+  {
+    index: "09",
+    name: "Sankar Charu",
+    role: "Alumni",
+    quote:
+      "I like this school very much. I am shining in my life today because I studied in this school.",
+  },
+  {
+    index: "10",
+    name: "Suresh",
+    role: "Local Guide",
+    quote:
+      "Reasonable fees and a genuinely good place for students to improve their knowledge and character.",
+  },
+];
+
 export const SCHOOL_EVENTS = {
   sectionLabel: "Annual Day & Cultural Extravaganza",
   headline: "Celebrations, Stagecraft, and Creative Expression.",
