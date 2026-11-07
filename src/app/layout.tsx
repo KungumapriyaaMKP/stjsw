@@ -24,8 +24,9 @@ export const metadata: Metadata = {
     "SJMHSS Tirupur",
   ],
   icons: {
-    icon: "/images/logo.png",
-    apple: "/images/logo.png",
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
   },
   openGraph: {
     title: "St. Joseph's Matriculation Higher Secondary School | Tirupur",
