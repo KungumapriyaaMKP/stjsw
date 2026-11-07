@@ -390,10 +390,13 @@ export default function HomePage() {
                 Words from Parents, Students, and Alumni.
               </h2>
             </div>
-            <p className="text-sm text-[#5C5954] max-w-md leading-relaxed">
-              Reflections from families and graduates who have experienced the teaching,
-              discipline, and enduring values of St. Joseph&apos;s across generations.
-            </p>
+            <div className="shrink-0">
+              <img
+                src="/images/google-reviews.png"
+                alt="Google Reviews 5 Stars"
+                className="h-14 sm:h-16 md:h-20 w-auto object-contain mix-blend-multiply"
+              />
+            </div>
           </div>
         </div>
 
