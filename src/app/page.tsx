@@ -461,13 +461,13 @@ export default function HomePage() {
 
           {/* 3 Clean Architectural Contact Pillars */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-8">
-            <div className="p-6 sm:p-8 bg-[#F3F1ED] border border-[#E5E2DC] space-y-4">
-              <MapPin className="w-5 h-5 stroke-[1.4] text-[#111110]" />
+            <div className="group p-6 sm:p-8 bg-[#F3F1ED] hover:bg-[#111110] border border-[#E5E2DC] hover:border-[#111110] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_30px_rgba(17,17,16,0.12)] space-y-4 cursor-pointer">
+              <MapPin className="w-5 h-5 stroke-[1.4] text-[#111110] group-hover:text-[#FAF9F6] transition-colors duration-300" />
               <div className="space-y-1.5">
-                <h3 className="text-xs uppercase tracking-[0.18em] font-semibold text-[#111110]">
+                <h3 className="text-xs uppercase tracking-[0.18em] font-semibold text-[#111110] group-hover:text-[#FAF9F6] transition-colors duration-300">
                   Campus Address
                 </h3>
-                <p className="text-sm text-[#5C5954] leading-relaxed">
+                <p className="text-sm text-[#5C5954] group-hover:text-[#FAF9F6]/80 transition-colors duration-300 leading-relaxed">
                   {SCHOOL_INFO.name}
                   <br />
                   35, Kangayam Road, Tirupur,
@@ -477,25 +477,25 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="p-6 sm:p-8 bg-[#F3F1ED] border border-[#E5E2DC] space-y-4">
-              <Phone className="w-5 h-5 stroke-[1.4] text-[#111110]" />
+            <div className="group p-6 sm:p-8 bg-[#F3F1ED] hover:bg-[#111110] border border-[#E5E2DC] hover:border-[#111110] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_30px_rgba(17,17,16,0.12)] space-y-4 cursor-pointer">
+              <Phone className="w-5 h-5 stroke-[1.4] text-[#111110] group-hover:text-[#FAF9F6] transition-colors duration-300" />
               <div className="space-y-1.5">
-                <h3 className="text-xs uppercase tracking-[0.18em] font-semibold text-[#111110]">
+                <h3 className="text-xs uppercase tracking-[0.18em] font-semibold text-[#111110] group-hover:text-[#FAF9F6] transition-colors duration-300">
                   Telephone &amp; Mobile
                 </h3>
-                <div className="text-sm text-[#5C5954] space-y-1">
+                <div className="text-sm text-[#5C5954] group-hover:text-[#FAF9F6]/80 transition-colors duration-300 space-y-1">
                   <p>
                     Landline:{" "}
                     <a
                       href={`tel:${SCHOOL_INFO.phones.landline1}`}
-                      className="text-[#111110] hover:underline underline-offset-4 font-medium"
+                      className="text-[#111110] group-hover:text-[#FAF9F6] hover:underline underline-offset-4 font-medium transition-colors duration-300"
                     >
                       {SCHOOL_INFO.phones.landline1}
                     </a>
                     {", "}
                     <a
                       href={`tel:${SCHOOL_INFO.phones.landline2}`}
-                      className="text-[#111110] hover:underline underline-offset-4 font-medium"
+                      className="text-[#111110] group-hover:text-[#FAF9F6] hover:underline underline-offset-4 font-medium transition-colors duration-300"
                     >
                       {SCHOOL_INFO.phones.landline2}
                     </a>
@@ -504,7 +504,7 @@ export default function HomePage() {
                     Mobile:{" "}
                     <a
                       href={`tel:${SCHOOL_INFO.phones.mobileRaw}`}
-                      className="text-[#111110] hover:underline underline-offset-4 font-medium"
+                      className="text-[#111110] group-hover:text-[#FAF9F6] hover:underline underline-offset-4 font-medium transition-colors duration-300"
                     >
                       {SCHOOL_INFO.phones.mobile}
                     </a>
@@ -513,13 +513,13 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="p-6 sm:p-8 bg-[#F3F1ED] border border-[#E5E2DC] space-y-4">
-              <Clock className="w-5 h-5 stroke-[1.4] text-[#111110]" />
+            <div className="group p-6 sm:p-8 bg-[#F3F1ED] hover:bg-[#111110] border border-[#E5E2DC] hover:border-[#111110] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_30px_rgba(17,17,16,0.12)] space-y-4 cursor-pointer">
+              <Clock className="w-5 h-5 stroke-[1.4] text-[#111110] group-hover:text-[#FAF9F6] transition-colors duration-300" />
               <div className="space-y-1.5">
-                <h3 className="text-xs uppercase tracking-[0.18em] font-semibold text-[#111110]">
+                <h3 className="text-xs uppercase tracking-[0.18em] font-semibold text-[#111110] group-hover:text-[#FAF9F6] transition-colors duration-300">
                   Visiting Hours
                 </h3>
-                <p className="text-sm text-[#5C5954] leading-relaxed">
+                <p className="text-sm text-[#5C5954] group-hover:text-[#FAF9F6]/80 transition-colors duration-300 leading-relaxed">
                   {SCHOOL_INFO.hours}
                   <br />
                   Closed on Sundays &amp; Public Holidays
