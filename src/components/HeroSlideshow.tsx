@@ -99,8 +99,8 @@ export default function HeroSlideshow() {
       <div className="absolute bottom-5 sm:bottom-8 inset-x-0 z-20 max-w-[1400px] mx-auto px-4 sm:px-6 md:px-12 flex items-end justify-between pointer-events-none">
         {/* Left Bottom: Motto Line + Slide Indicator Lines */}
         <div className="space-y-3 sm:space-y-4 pointer-events-auto">
-          <p className="font-motto font-medium text-2xl sm:text-4xl md:text-5xl text-[#FAF9F6] tracking-[0.08em] leading-none drop-shadow-[0_4px_16px_rgba(17,17,16,0.9)]">
-            Shine and Let Shine
+          <p className="font-motto font-normal text-3xl sm:text-5xl md:text-6xl text-[#FAF9F6] tracking-[0.04em] leading-tight drop-shadow-[0_4px_16px_rgba(17,17,16,0.9)]">
+            Shine and let Shine
           </p>
           <div className="flex items-center gap-1.5 sm:gap-2">
             {HERO_SLIDES.map((slide, idx) => (

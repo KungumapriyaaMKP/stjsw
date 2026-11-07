@@ -73,7 +73,14 @@ export default function RootLayout({
           fetchPriority="high"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap"
+          rel="preload"
+          as="font"
+          type="font/woff2"
+          href="https://db.onlinewebfonts.com/t/47ae039b7c9d2205f7732048396d86c4.woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap"
           rel="stylesheet"
         />
       </head>

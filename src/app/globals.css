@@ -1,9 +1,19 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Kugile";
+  src: url("https://db.onlinewebfonts.com/t/47ae039b7c9d2205f7732048396d86c4.woff2") format("woff2"),
+       url("https://db.onlinewebfonts.com/t/47ae039b7c9d2205f7732048396d86c4.woff") format("woff"),
+       url("https://db.onlinewebfonts.com/t/47ae039b7c9d2205f7732048396d86c4.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 @theme {
   --font-serif: "Cormorant Garamond", Georgia, Cambria, "Times New Roman", Times, serif;
   --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-motto: "Cinzel", Georgia, serif;
+  --font-motto: "Kugile", "Cormorant Garamond", Georgia, serif;
 
   --color-alabaster: #FAF9F6;
   --color-stone-warm: #F3F1ED;
