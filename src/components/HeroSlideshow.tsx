@@ -96,10 +96,10 @@ export default function HeroSlideshow() {
       })}
 
       {/* Bottom-Left Motto & Minimal Slide Indicators / Arrows */}
-      <div className="absolute bottom-4 sm:bottom-6 inset-x-0 z-20 max-w-[1400px] mx-auto px-4 sm:px-6 md:px-12 flex items-end justify-between pointer-events-none">
+      <div className="absolute bottom-5 sm:bottom-8 inset-x-0 z-20 max-w-[1400px] mx-auto px-4 sm:px-6 md:px-12 flex items-end justify-between pointer-events-none">
         {/* Left Bottom: Motto Line + Slide Indicator Lines */}
-        <div className="space-y-2.5 sm:space-y-3 pointer-events-auto">
-          <p className="font-serif italic text-2xl sm:text-3xl md:text-4xl text-[#FAF9F6] tracking-wide drop-shadow-[0_2px_10px_rgba(17,17,16,0.75)]">
+        <div className="space-y-3 sm:space-y-4 pointer-events-auto">
+          <p className="font-motto text-4xl sm:text-6xl md:text-7xl text-[#FAF9F6] tracking-wide leading-none drop-shadow-[0_4px_16px_rgba(17,17,16,0.9)]">
             Shine and let Shine
           </p>
           <div className="flex items-center gap-1.5 sm:gap-2">
