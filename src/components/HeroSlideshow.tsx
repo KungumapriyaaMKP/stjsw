@@ -88,27 +88,35 @@ export default function HeroSlideshow() {
 
             {/* Subtle top gradient so navbar remains readable */}
             <div className="absolute inset-x-0 top-0 h-28 sm:h-32 bg-gradient-to-b from-[#111110]/70 to-transparent pointer-events-none" />
+
+            {/* Subtle bottom gradient so motto and controls remain legible */}
+            <div className="absolute inset-x-0 bottom-0 h-36 sm:h-44 bg-gradient-to-t from-[#111110]/75 via-[#111110]/25 to-transparent pointer-events-none" />
           </div>
         );
       })}
 
-      {/* Minimal Bottom Slide Indicators & Left/Right Arrows */}
-      <div className="absolute bottom-4 sm:bottom-6 inset-x-0 z-20 max-w-[1400px] mx-auto px-4 sm:px-6 md:px-12 flex items-center justify-between pointer-events-none">
-        {/* Slide indicator lines */}
-        <div className="flex items-center gap-1.5 sm:gap-2 pointer-events-auto">
-          {HERO_SLIDES.map((slide, idx) => (
-            <button
-              key={slide.id}
-              type="button"
-              onClick={() => setCurrentIndex(idx)}
-              aria-label={`Slide ${idx + 1}`}
-              className={`h-1 transition-all duration-500 ${
-                idx === currentIndex
-                  ? "w-8 sm:w-10 bg-[#FAF9F6]"
-                  : "w-3 sm:w-4 bg-[#FAF9F6]/45 hover:bg-[#FAF9F6]/80"
-              }`}
-            />
-          ))}
+      {/* Bottom-Left Motto & Minimal Slide Indicators / Arrows */}
+      <div className="absolute bottom-4 sm:bottom-6 inset-x-0 z-20 max-w-[1400px] mx-auto px-4 sm:px-6 md:px-12 flex items-end justify-between pointer-events-none">
+        {/* Left Bottom: Motto Line + Slide Indicator Lines */}
+        <div className="space-y-2.5 sm:space-y-3 pointer-events-auto">
+          <p className="font-serif italic text-2xl sm:text-3xl md:text-4xl text-[#FAF9F6] tracking-wide drop-shadow-[0_2px_10px_rgba(17,17,16,0.75)]">
+            Shine and let Shine
+          </p>
+          <div className="flex items-center gap-1.5 sm:gap-2">
+            {HERO_SLIDES.map((slide, idx) => (
+              <button
+                key={slide.id}
+                type="button"
+                onClick={() => setCurrentIndex(idx)}
+                aria-label={`Slide ${idx + 1}`}
+                className={`h-1 transition-all duration-500 ${
+                  idx === currentIndex
+                    ? "w-8 sm:w-10 bg-[#FAF9F6]"
+                    : "w-3 sm:w-4 bg-[#FAF9F6]/45 hover:bg-[#FAF9F6]/80"
+                }`}
+              />
+            ))}
+          </div>
         </div>
 
         {/* Subtle Previous / Next Arrows */}
