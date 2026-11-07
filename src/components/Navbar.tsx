@@ -15,6 +15,7 @@ import {
 const NAV_LINKS = [
   { label: "About", href: "/#about" },
   { label: "Academics", href: "/#academics" },
+  { label: "Events", href: "/#events" },
   { label: "Achievements", href: "/achievements" },
   { label: "Gallery", href: "/gallery" },
   { label: "Alumni (JOSATS)", href: "/alumni" },

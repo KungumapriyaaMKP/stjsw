@@ -19,6 +19,7 @@ import {
   SCHOOL_INFO,
   KEY_METRICS,
   ACADEMIC_TIERS,
+  SCHOOL_EVENTS,
 } from "@/data/schoolData";
 
 export default function HomePage() {
@@ -317,6 +318,65 @@ export default function HomePage() {
                   </ul>
                 </div>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 4.5 Cultural Events & Annual Day Celebrations */}
+      <section
+        id="events"
+        className="py-16 sm:py-24 md:py-32 bg-[#FAF9F6] border-b border-[#E5E2DC]"
+      >
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 md:px-12">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-5 sm:gap-6 pb-10 sm:pb-16 border-b border-[#E5E2DC]">
+            <div className="space-y-3 sm:space-y-4 max-w-2xl">
+              <div className="inline-flex items-center gap-2.5 text-xs uppercase tracking-[0.2em] text-[#5C5954]">
+                <span className="w-6 h-[1px] bg-[#111110]" />
+                <span>{SCHOOL_EVENTS.sectionLabel}</span>
+              </div>
+              <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-normal tracking-tight text-[#111110]">
+                {SCHOOL_EVENTS.headline}
+              </h2>
+            </div>
+            <p className="text-sm text-[#5C5954] max-w-md leading-relaxed">
+              {SCHOOL_EVENTS.subtitle}
+            </p>
+          </div>
+
+          <div className="pt-10 sm:pt-16 grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+            {SCHOOL_EVENTS.events.map((event) => (
+              <article
+                key={event.index}
+                className="group bg-[#FAF9F6] border border-[#E5E2DC] overflow-hidden flex flex-col justify-between transition-all duration-300 hover:border-[#111110]"
+              >
+                <div>
+                  <div className="relative aspect-[16/10] w-full overflow-hidden bg-[#111110]">
+                    <img
+                      src={event.image}
+                      alt={event.title}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter contrast-[1.03]"
+                    />
+                    <div className="absolute top-3 left-3 bg-[#111110]/85 backdrop-blur-xs text-[#FAF9F6] px-3 py-1 text-[10px] uppercase tracking-[0.18em]">
+                      {event.tag}
+                    </div>
+                  </div>
+
+                  <div className="p-5 sm:p-7 space-y-2.5 sm:space-y-3">
+                    <h3 className="font-serif text-xl sm:text-2xl font-normal text-[#111110]">
+                      {event.title}
+                    </h3>
+                    <p className="text-xs text-[#5C5954] leading-relaxed">
+                      {event.description}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="px-5 sm:px-7 pb-5 sm:pb-6 pt-4 border-t border-[#E5E2DC]/60 flex items-center justify-between text-[11px] uppercase tracking-[0.16em] text-[#5C5954]">
+                  <span>St. Joseph&apos;s Cultural Wing</span>
+                  <span className="font-mono">{event.index}</span>
+                </div>
+              </article>
             ))}
           </div>
         </div>

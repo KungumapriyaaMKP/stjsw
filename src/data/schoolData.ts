@@ -214,6 +214,39 @@ export const ACADEMIC_TIERS = [
   },
 ];
 
+export const SCHOOL_EVENTS = {
+  sectionLabel: "Annual Day & Cultural Extravaganza",
+  headline: "Celebrations, Stagecraft, and Creative Expression.",
+  subtitle:
+    "Beyond the classroom, St. Joseph's comes alive with grand annual day celebrations, patriotic pageants, and musical showcases that nurture stage confidence and artistic talent.",
+  events: [
+    {
+      index: "01",
+      tag: "Annual Day Grand Stage",
+      title: "Patriotic Formation & Open-Air Stage Pageant",
+      description:
+        "Held beneath the illuminated St. Joseph's portico, students present synchronized acrobatic formations and patriotic tributes before a gathering of parents, dignitaries, and faculty.",
+      image: "/images/events/annual-day-main-stage.jpg",
+    },
+    {
+      index: "02",
+      tag: "Foundational & Primary Showcase",
+      title: "Junior Cultural Fest & Ensemble Dance",
+      description:
+        "Young scholars from Kindergarten and Primary wings take center stage in vibrant costumes, building early public-speaking and performance confidence.",
+      image: "/images/events/junior-cultural-fest.jpg",
+    },
+    {
+      index: "03",
+      tag: "Senior Student Showcase",
+      title: "Contemporary Choreography & Stage Productions",
+      description:
+        "High school and higher secondary students collaborate on high-energy group choreography, theatrical productions, and multimedia stage performances.",
+      image: "/images/events/senior-choreography.jpg",
+    },
+  ],
+};
+
 export const CAMPUS_FACILITIES = [
   {
     title: "Digital Learning Environments",

@@ -49,6 +49,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/#events" className="hover:text-[#FAF9F6]">
+                  Annual Day &amp; Events
+                </Link>
+              </li>
+              <li>
                 <Link href="/achievements" className="hover:text-[#FAF9F6]">
                   Achievements
                 </Link>
