@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  --color-alabaster: #FAF9F6;
+  --color-stone-warm: #F3F1ED;
+  --color-stone-border: #E5E2DC;
+  --color-charcoal: #262523;
+  --color-graphite: #5C5954;
+  --color-obsidian: #111110;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: #FAF9F6;
+    color: #111110;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: #111110;
+    color: #FAF9F6;
+  }
+}
+
+/* Subtle architectural animations */
+@keyframes kenBurns {
+  0% {
+    transform: scale(1.0);
+  }
+  100% {
+    transform: scale(1.07);
+  }
+}
+
+.animate-ken-burns {
+  animation: kenBurns 9s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+@keyframes slideProgress {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+.animate-slide-progress {
+  transform-origin: left;
+  animation: slideProgress 6.5s linear forwards;
+}
