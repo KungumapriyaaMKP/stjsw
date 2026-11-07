@@ -350,26 +350,15 @@ export default function HomePage() {
                 key={event.index}
                 className="group bg-[#FAF9F6] border border-[#E5E2DC] overflow-hidden flex flex-col justify-between transition-all duration-300 hover:border-[#111110]"
               >
-                <div>
-                  <div className="relative aspect-[16/10] w-full overflow-hidden bg-[#111110]">
-                    <img
-                      src={event.image}
-                      alt={event.title}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter contrast-[1.03]"
-                    />
-                  </div>
-
-                  <div className="p-5 sm:p-7 space-y-2.5 sm:space-y-3">
-                    <h3 className="font-serif text-xl sm:text-2xl font-normal text-[#111110]">
-                      {event.title}
-                    </h3>
-                    <p className="text-xs text-[#5C5954] leading-relaxed">
-                      {event.description}
-                    </p>
-                  </div>
+                <div className="relative aspect-[16/10] w-full overflow-hidden bg-[#111110]">
+                  <img
+                    src={event.image}
+                    alt={event.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter contrast-[1.03]"
+                  />
                 </div>
 
-                <div className="px-5 sm:px-7 pb-5 sm:pb-6 pt-4 border-t border-[#E5E2DC]/60 flex items-center justify-between text-[11px] uppercase tracking-[0.16em] text-[#5C5954]">
+                <div className="px-5 sm:px-7 py-4 border-t border-[#E5E2DC]/60 flex items-center justify-between text-[11px] uppercase tracking-[0.16em] text-[#5C5954]">
                   <span>St. Joseph&apos;s Cultural Wing</span>
                   <span className="font-mono">{event.index}</span>
                 </div>
