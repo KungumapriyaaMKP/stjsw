@@ -141,21 +141,25 @@ export const KEY_METRICS = [
     value: "Est. 1965",
     label: "Six Decades of Excellence",
     detail: "Serving Tirupur families with trusted educational excellence since 1965",
+    href: "#about",
   },
   {
     value: "KG to XII",
     label: "State Board & Matriculation",
     detail: "Complete academic continuum from Kindergarten through Higher Secondary",
+    href: "#academics",
   },
   {
     value: "3 + IT",
     label: "Dedicated Science & Tech Labs",
     detail: "Distinct Physics, Chemistry, and Biology labs plus an A/C Computer Lab",
+    href: "/gallery",
   },
   {
     value: "100%",
     label: "CCTV, RO Water & Transit",
     detail: "Active campus-wide CCTV monitoring, RO purification, and regulated bus routes",
+    href: "/gallery",
   },
 ];
 

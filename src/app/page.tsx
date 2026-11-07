@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
 import {
   MapPin,
   Phone,
@@ -42,24 +43,28 @@ export default function HomePage() {
       {/* 2. Institutional Quick Bar & Key Metrics */}
       <section className="border-b border-[#E5E2DC] bg-[#FAF9F6]">
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 md:px-12 py-10 sm:py-12 md:py-16">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             {KEY_METRICS.map((item, idx) => (
-              <div
+              <Link
                 key={idx}
-                className="border-l border-[#111110]/20 pl-5 sm:pl-6 flex flex-col justify-between"
+                href={item.href}
+                className="group relative border-l-2 border-[#111110]/20 hover:border-[#111110] bg-transparent hover:bg-[#111110] p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_30px_rgba(17,17,16,0.12)] flex flex-col justify-between cursor-pointer"
               >
                 <div>
-                  <span className="font-serif text-3xl sm:text-4xl md:text-5xl font-normal tracking-tight text-[#111110] block">
-                    {item.value}
-                  </span>
-                  <h2 className="text-xs uppercase tracking-[0.18em] font-semibold text-[#111110] mt-2 sm:mt-3">
+                  <div className="flex items-start justify-between gap-2">
+                    <span className="font-serif text-3xl sm:text-4xl md:text-5xl font-normal tracking-tight text-[#111110] group-hover:text-[#FAF9F6] transition-colors duration-300 block">
+                      {item.value}
+                    </span>
+                    <ArrowUpRight className="w-4 h-4 stroke-[1.5] text-[#5C5954] opacity-0 -translate-x-1 translate-y-1 group-hover:opacity-100 group-hover:translate-x-0 group-hover:translate-y-0 group-hover:text-[#FAF9F6] transition-all duration-300 shrink-0 mt-1" />
+                  </div>
+                  <h2 className="text-xs uppercase tracking-[0.18em] font-semibold text-[#111110] group-hover:text-[#FAF9F6] transition-colors duration-300 mt-2 sm:mt-3">
                     {item.label}
                   </h2>
                 </div>
-                <p className="text-xs text-[#5C5954] leading-relaxed mt-1.5 sm:mt-2">
+                <p className="text-xs text-[#5C5954] group-hover:text-[#FAF9F6]/75 transition-colors duration-300 leading-relaxed mt-2">
                   {item.detail}
                 </p>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
