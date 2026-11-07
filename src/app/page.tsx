@@ -357,9 +357,6 @@ export default function HomePage() {
                       alt={event.title}
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter contrast-[1.03]"
                     />
-                    <div className="absolute top-3 left-3 bg-[#111110]/85 backdrop-blur-xs text-[#FAF9F6] px-3 py-1 text-[10px] uppercase tracking-[0.18em]">
-                      {event.tag}
-                    </div>
                   </div>
 
                   <div className="p-5 sm:p-7 space-y-2.5 sm:space-y-3">
