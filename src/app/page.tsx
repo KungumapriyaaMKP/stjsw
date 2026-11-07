@@ -374,13 +374,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 4.75 Voices of St. Joseph's (10 Parent, Student & Alumni Testimonials) */}
+      {/* 4.75 Voices of St. Joseph's (Continuous Right-to-Left Runway Marquee) */}
       <section
         id="testimonials"
-        className="py-16 sm:py-24 md:py-32 bg-[#F3F1ED] border-b border-[#E5E2DC]"
+        className="py-16 sm:py-24 md:py-32 bg-[#F3F1ED] border-b border-[#E5E2DC] overflow-hidden"
       >
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 md:px-12">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-5 sm:gap-6 pb-10 sm:pb-16 border-b border-[#E5E2DC]">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-5 sm:gap-6 pb-10 sm:pb-14 border-b border-[#E5E2DC]">
             <div className="space-y-3 sm:space-y-4 max-w-2xl">
               <div className="inline-flex items-center gap-2.5 text-xs uppercase tracking-[0.2em] text-[#5C5954]">
                 <span className="w-6 h-[1px] bg-[#111110]" />
@@ -395,30 +395,42 @@ export default function HomePage() {
               discipline, and enduring values of St. Joseph&apos;s across generations.
             </p>
           </div>
+        </div>
 
-          <div className="pt-10 sm:pt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-5 sm:gap-6">
-            {TESTIMONIALS.map((item) => (
+        {/* Full-Bleed Right-to-Left Continuous Runway Track */}
+        <div className="relative mt-10 sm:mt-14 w-full overflow-hidden">
+          {/* Soft Edge Fade Gradients */}
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-12 sm:w-28 bg-gradient-to-r from-[#F3F1ED] to-transparent z-10" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-12 sm:w-28 bg-gradient-to-l from-[#F3F1ED] to-transparent z-10" />
+
+          <div className="animate-marquee-runway gap-6 px-3">
+            {[...TESTIMONIALS, ...TESTIMONIALS].map((item, idx) => (
               <article
-                key={item.index}
-                className="bg-[#FAF9F6] border border-[#E5E2DC] p-6 flex flex-col justify-between transition-colors duration-300 hover:border-[#111110]"
+                key={`${item.index}-${idx}`}
+                className="w-[310px] sm:w-[370px] shrink-0 bg-[#FAF9F6] border border-[#E5E2DC] p-7 sm:p-8 flex flex-col justify-between transition-all duration-300 hover:border-[#111110] hover:bg-[#111110] group select-none"
               >
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between text-[10px] font-mono uppercase tracking-[0.2em] text-[#5C5954]">
-                    <span>Review</span>
+                <div className="space-y-5">
+                  <div className="flex items-center justify-between text-[10px] font-mono uppercase tracking-[0.2em] text-[#5C5954] group-hover:text-[#FAF9F6]/60 transition-colors">
+                    <span>Verified Review</span>
                     <span>{item.index}</span>
                   </div>
-                  <p className="text-xs text-[#111110] leading-relaxed font-normal">
+                  <p className="font-serif text-lg sm:text-xl italic text-[#111110] group-hover:text-[#FAF9F6] leading-relaxed transition-colors">
                     &ldquo;{item.quote}&rdquo;
                   </p>
                 </div>
 
-                <div className="pt-5 mt-6 border-t border-[#E5E2DC]/70">
-                  <div className="font-serif text-lg font-medium text-[#111110] leading-tight">
-                    {item.name}
+                <div className="pt-5 mt-8 border-t border-[#E5E2DC]/80 group-hover:border-[#FAF9F6]/20 flex items-center justify-between gap-3 transition-colors">
+                  <div>
+                    <div className="text-xs font-semibold uppercase tracking-[0.14em] text-[#111110] group-hover:text-[#FAF9F6] transition-colors">
+                      {item.name}
+                    </div>
+                    <div className="text-[10px] uppercase tracking-[0.16em] text-[#5C5954] group-hover:text-[#FAF9F6]/70 mt-1 transition-colors">
+                      {item.role}
+                    </div>
                   </div>
-                  <div className="text-[10px] uppercase tracking-[0.16em] text-[#5C5954] mt-1">
-                    {item.role}
-                  </div>
+                  <span className="font-serif text-3xl leading-none text-[#111110]/15 group-hover:text-[#FAF9F6]/25 transition-colors">
+                    &rdquo;
+                  </span>
                 </div>
               </article>
             ))}

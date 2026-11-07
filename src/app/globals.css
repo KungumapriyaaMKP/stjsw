@@ -55,3 +55,22 @@
   transform-origin: left;
   animation: slideProgress 6.5s linear forwards;
 }
+
+@keyframes marqueeRunway {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-marquee-runway {
+  display: flex;
+  width: max-content;
+  animation: marqueeRunway 48s linear infinite;
+}
+
+.animate-marquee-runway:hover {
+  animation-play-state: paused;
+}
